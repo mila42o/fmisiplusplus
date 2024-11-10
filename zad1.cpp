@@ -1,17 +1,8 @@
 #include<iostream>
 using namespace std;
-int main(){
-    int n,prpoz1=0,prpoz2=0,en=0;
-    bool x=true;
+void printCastle(int n){
+    int prpoz1=0,prpoz2=0,en=0;
     char a = 92;
-    while(x){
-        cin >> n;
-        if(n<1 || n>23){
-            cout << "molya wywedi drugo chilo" << endl;
-        }else{
-            x=false;
-        }
-    }
     en=4*n+1;
     prpoz1=2*n-1;
     prpoz2=2*n+1;
@@ -94,5 +85,18 @@ int main(){
         }
         cout << endl;
     }
+}
+int main(){
+    int n;
+    bool x=true;
+    while(x){
+        cin >> n;
+        if(n<1 || n>23){
+            cout << "molya wywedi drugo chilo" << endl;
+        }else{
+            x=false;
+        }
+    }
+    printCastle(n);
     return 0;
 }
